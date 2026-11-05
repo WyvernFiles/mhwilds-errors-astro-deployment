@@ -1,7 +1,10 @@
 ---
+import Sidebar from "../components/Sidebar.astro";
+import Topbar from "../components/Topbar.astro";
 const { title } = Astro.props;
 ---
 
+<!-- Head Metadata -->
 <html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
@@ -11,7 +14,20 @@ const { title } = Astro.props;
     <script src="/js/applysavedtheme.js" is:inline></script>
     <script type="module" src="/scripts/js/main.js"></script>
   </head>
+
+  <!-- Body element insertion -->
+
   <body>
-    <slot />
+    <Topbar />
+    <div class="layout">
+      <nav class="sidebar">
+        <input type="text" id="searchBar" placeholder="Search errors..." />
+        <h2>List of Errors</h2>
+        <Sidebar />
+      </nav>
+      <main class="main">
+        <slot />
+      </main>
+    </div>
   </body>
 </html>

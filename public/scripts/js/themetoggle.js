@@ -1,4 +1,4 @@
-/* ===== Theme ===== */
+/* ===== Theme toggle ===== */
 
 export function toggleTheme() {
   const html = document.documentElement;
