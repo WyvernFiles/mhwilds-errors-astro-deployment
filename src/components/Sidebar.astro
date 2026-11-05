@@ -1,4 +1,6 @@
 ---
+// Identify component errors to build
+
 const errors = [
   {
     label: "Fatal D3D error",
@@ -30,6 +32,7 @@ const errors = [
 const currentPath = Astro.url.pathname.replace(/\/+$/, "");
 ---
 
+<!-- Identify the errorList, map its errors to label/file to assign names and links and "active" class status -->
 <ul id="errorList">
   {
     errors.map((error) => (

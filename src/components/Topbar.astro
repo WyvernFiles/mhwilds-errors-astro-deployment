@@ -12,7 +12,7 @@ const items = [
 const currentPath = Astro.url.pathname.replace(/\/+$/, "");
 ---
 
-<!-- Identify the topbar HTML, map the items to it, and apply URL normalization -->
+<!-- Identify the topbar, map its items to label/file to assign names and links and "active" class status -->
 <nav class="topbar">
   {
     items.map((item) => (
@@ -28,5 +28,8 @@ const currentPath = Astro.url.pathname.replace(/\/+$/, "");
       </a>
     ))
   }
+
+  <!-- Build the themetoggle button -->
+
   <button type="button" id="themeToggle">☾</button>
 </nav>
