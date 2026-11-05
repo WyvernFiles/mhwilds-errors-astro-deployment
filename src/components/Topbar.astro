@@ -1,0 +1,32 @@
+---
+// Identify component items to build
+
+const items = [
+  { label: "Home", file: "/" },
+  { label: "About", file: "/topbar/about/" },
+  { label: "Resources", file: "/topbar/resources/" },
+];
+
+// Normalize URLs to assign the "active" class
+
+const currentPath = Astro.url.pathname.replace(/\/+$/, "");
+---
+
+<!-- Identify the topbar HTML, map the items to it, and apply URL normalization -->
+<nav class="topbar">
+  {
+    items.map((item) => (
+      <a
+        href={item.file}
+        class={
+          item.file.replace(/\/+$/, "") === currentPath
+            ? "nav-btn active"
+            : "nav-btn"
+        }
+      >
+        {item.label}
+      </a>
+    ))
+  }
+  <button type="button" id="themeToggle">☾</button>
+</nav>
