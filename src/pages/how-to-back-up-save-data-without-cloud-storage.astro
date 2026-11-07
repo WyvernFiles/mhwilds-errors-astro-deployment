@@ -1,0 +1,91 @@
+---
+import HeadLayout from "../layouts/head-layout.astro";
+---
+
+<HeadLayout title="How to Back Up Save Data Without Cloud Storage">
+  <h1>How to Back Up Save Data Without Cloud Storage</h1>
+
+  <h2>PlayStation 5:</h2>
+
+  <p>
+    PS5 <b>does not support</b> exporting individual game save data to external storage.
+    However, you can back up all saved data including Monster Hunter Wilds'. Learn
+    how to <a
+      href="https://www.playstation.com/en-us/support/hardware/back-up-ps5-data-USB/"
+      >here</a
+    >.
+  </p>
+
+  <h2>Xbox Series X|S:</h2>
+
+  <p>
+    Xbox Series X|S <b>does not support</b> external backups for game save data. It
+    only does so for the games themselves, apps, media, and console settings.
+  </p>
+
+  <h2>PC:</h2>
+
+  <p>
+    PC players can manually back up their local save files to an external
+    storage device.
+
+    <h3>To create a backup:</h3>
+
+    <ul>
+      <li>Ensure the game is closed</li>
+      <li>Connect an external storage device</li>
+      <li>
+        Navigate to Program Files (x86), which is usually found in File Explorer
+        - This PC - Local Disk (C:)
+      </li>
+      <li>
+        Navigate to Steam - userdata - a folder named after your Steam ID -
+        2246340 - remote
+      </li>
+      <li>
+        The win64_save folder is your game's saved data. Copy the entire folder
+        to an external storage device
+      </li>
+    </ul>
+
+    <h3>To restore a backup:</h3>
+
+    <p>
+      <b>Note:</b> If Steam Cloud is enabled,<strong>
+        synchronisation conflicts may occur when restoring an older backup.</strong
+      > Pay attention to any synchronisation prompts to avoid overwriting the save
+      you intend to keep.
+    </p>
+    <ul>
+      <li>Ensure Monster Hunter Wilds is closed</li>
+
+      <li>
+        Disable Steam Cloud for Monster Hunter Wilds to avoid synchronisation
+        conflicts (Open Steam - Library - Right-click Monster Hunter Wilds -
+        Properties - Manage Cloud Settings - Ensure the "Enable Steam Cloud"
+        toggle is disabled)
+      </li>
+
+      <li>Close Steam completely</li>
+
+      <li>Connect the external storage device that contains the backup</li>
+
+      <li>Navigate to the original save location</li>
+
+      <li>
+        Make a separate copy of your current win64_save folder in case you need
+        to revert
+      </li>
+
+      <li>Replace the existing win64_save folder with your backed-up copy</li>
+
+      <li>Launch the game, and check whether your progress loads correctly</li>
+    </ul>
+    <p>
+      When satisfied that the restored save works, you may re-enable Steam
+      Cloud. However, you may be prompted about synchronisation conflicts. Read
+      the prompts carefully to determine which save data you would like to be
+      used.
+    </p>
+  </p>
+</HeadLayout>
