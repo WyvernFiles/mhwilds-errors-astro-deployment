@@ -1,4 +1,4 @@
-/* ===== Theme toggle ===== */
+/* ===== Create toggletheme button and save to browser cache===== */
 
 export function toggleTheme() {
   const html = document.documentElement;
@@ -9,6 +9,8 @@ export function toggleTheme() {
   button.textContent = theme === "light" ? "☾" : "☀";
   localStorage.setItem("theme", theme);
 }
+
+/* ===== add click eventListener to toggletheme function ===== */
 
 export function initializeTheme() {
   document.addEventListener("DOMContentLoaded", () => {

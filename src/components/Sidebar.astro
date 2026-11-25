@@ -34,13 +34,9 @@ const currentPath = Astro.url.pathname.replace(/\/+$/, "");
 
 <!-- Identify the errorList, map its errors to label/file to assign names and links and "active" class status -->
 <ul id="errorList">
-  {
-    errors.map((error) => (
-      <li
-        class={error.file.replace(/\/+$/, "") === currentPath ? "active" : ""}
-      >
-        <a href={error.file}>{error.label}</a>
-      </li>
-    ))
-  }
+  {errors.map((error) => (
+    <li class={error.file.replace(/\/+$/, "") === currentPath ? "active" : ""}>
+      <a href={error.file}>{error.label}</a>
+    </li>
+  ))}
 </ul>
